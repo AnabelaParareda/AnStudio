@@ -212,7 +212,7 @@ nav ul li a:hover {
 
 .owl-theme .owl-nav [class*='owl-'] {
  background: #ebac00; 
- color: black;
+ color: rgb(0, 0, 0);
  font-size: 20px;
  margin: 0 10px;
  border-radius: 50%;
@@ -239,7 +239,7 @@ nav ul li a:hover {
 }
 
 .socials a:hover {
- color: #5e5e5e;
+ color: #795900;
 }
 
 /* FOOTER */
