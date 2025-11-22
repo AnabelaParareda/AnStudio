@@ -242,26 +242,6 @@ nav ul li a:hover {
  color: #5e5e5e;
 }
 
-#whatsapp {
- position: fixed;
- top: 85%; 
- right: 20px; 
- z-index: 1001; 
-}
-
-#whatsapp img {
- width: 70px; 
- transition: transform 0.3s;
-}
-
-#whatsapp img:hover {
- transform: scale(1.1);
-}
-
-#whatsapp a {
- background: none;
-}
-
 /* FOOTER */
 #footer {
  height: auto; 
@@ -401,7 +381,7 @@ nav ul li a:hover {
   display: block;
   max-width: 90vw;
   text-align: center;
-  color: #111; /* Color de texto oscuro */
+  color: #ffffff; /* Color de texto oscuro */
   padding: 10px 0;
   font-size: 1.1em;
   font-weight: bold;
