@@ -362,8 +362,7 @@ nav ul li a:hover {
   height: 100%; 
   overflow: auto; 
   /* CLAVE: Fondo blanco semi-transparente */
-  background-color: rgba(255, 255, 255, 0.95); 
-  
+  background-color: rgba(0, 0, 0, 0.599); 
   /* Usamos las propiedades de Flexbox para el centrado, pero sin el 'display: flex'*/
   flex-direction: column;
   justify-content: center;
@@ -379,7 +378,6 @@ nav ul li a:hover {
   object-fit: contain; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
   border-radius: 8px;
-  
   /* Animación de entrada */
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
