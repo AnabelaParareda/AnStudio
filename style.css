@@ -78,7 +78,7 @@ nav ul li a:hover {
 }
 
 .dark {
- background: #111;
+ background: #000000;
  color: white;
  padding-left: 300px;
  padding-right: 300px;
@@ -200,7 +200,7 @@ nav ul li a:hover {
 }
 
 .owl-carousel .item p {
- color: white;
+ color: #ffffff;
  margin-top: 15px;
  font-size: 16px;
 }
@@ -245,7 +245,7 @@ nav ul li a:hover {
 /* FOOTER */
 #footer {
  height: auto; 
- background: #111; 
+ background: #000000; 
  color: white;
  padding: 30px 18px; 
  text-align: center;
