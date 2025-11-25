@@ -325,10 +325,6 @@ nav ul li a:hover {
 }
 
 /* ========================================================== */
-/* LIGHTBOX/MODAL STYLES (Nueva funcionalidad) */
-/* ========================================================== */
-
-/* ========================================================== */
 /* LIGHTBOX/MODAL STYLES (CORREGIDO - Solo un display: none al inicio) */
 /* ========================================================== */
 
@@ -404,92 +400,134 @@ nav ul li a:hover {
 }
 
 /* ========================================================== */
-/* ESTILOS DE LA PORTADA (Sección #inicio) */
+/* ESTILOS DE LA PORTADA (Sección #inicio) - DISEÑO GRÁFICO (NUEVO) */
 /* ========================================================== */
 
 .hero-section {
-    /* Ajusta la altura si es necesario, pero 100vh suele ser bueno */
-    height: 100vh;
-    /* Usaremos el fondo #F7F3E9 (color hueso/crema de tu diseño original) */
+    /* Fondo color crema de tu diseño (quitamos el amarillo #ebac00) */
     background-color: #f7f3e9; 
-    color: #333; /* Texto en negro */
-    /* Quitamos el flex-direction column por defecto de .section */
-    flex-direction: column; 
-    position: relative; /* Contenedor principal para posicionamiento absoluto */
+    height: 100vh;
+    padding: 0; 
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .hero-content {
     position: relative;
     width: 100%;
-    height: 100%;
-    /* Flexbox para centrar las imágenes y el texto base */
+    max-width: 1200px; /* Área de trabajo central */
+    height: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.portfolio-text-image {
+/* 1. Título principal "PORTAFOLIO" (portafolio_main.png) */
+.main-title-img {
     position: absolute;
-    width: 75%; /* Ajusta el tamaño del texto "portfolio" y cursivas */
-    max-width: 900px; 
-    top: 45%; /* Posición vertical inicial (cerca del centro) */
+    width: 70%; 
+    max-width: 850px; 
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Fondo de la composición */
-}
-
-.character-img {
-    position: absolute;
-    /* En tu HTML la llamaste "yop.png", ajusté el nombre de la clase aquí */
-    width: 25%; /* Ajusta el tamaño de la chica */
-    max-width: 320px; 
-    top: 50%; /* Posiciona la chica verticalmente (ajusta según el diseño) */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Para que la chica esté por encima del texto "portfolio" */
-}
-
-.year-text {
-    position: absolute;
-    font-size: 2.5vw; /* Tamaño de fuente relativo al ancho de la ventana */
-    font-weight: bold;
-    color: #ebac00; /* Amarillo de tu tema */
-    top: 55%; /* Posiciona el 2025 verticalmente (ajusta) */
-    left: 65%; /* Posiciona el 2025 horizontalmente (ajusta) */
+    transform: translate(-50%, -50%); 
     z-index: 1; 
 }
 
+/* 2. Ilustración de la Chica (yop.png) */
+.character-img {
+    position: absolute;
+    width: 25%; /* Aumentamos el tamaño para que cubra PORTAFOLIO */
+    max-width: 320px; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Por encima del texto principal */
+}
+
+/* 3. Palabras en cursiva (Posicionamiento preciso) */
+
+.text-edicion {
+    position: absolute;
+    width: 10%; /* Tamaño relativo */
+    max-width: 150px;
+    top: 35%; /* Arriba a la izquierda */
+    left: 30%; 
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.text-diseno {
+    position: absolute;
+    width: 15%; 
+    max-width: 150px;
+    top: 35%; /* Arriba a la derecha */
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.text-ilustracion {
+    position: absolute;
+    width: 20%; 
+    max-width: 200px;
+    top: 65%; /* Abajo a la izquierda */
+    left: 35%; 
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.text-branding {
+    position: absolute;
+    width: 20%; 
+    max-width: 200px;
+    top: 65%; /* Abajo a la derecha */
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+/* 4. Nombre de la Autora (Mantenemos el texto centrado debajo) */
 .author-name {
     position: absolute;
-    bottom: 10%; /* Distancia desde la parte inferior */
+    bottom: 5%; 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5vw; /* Tamaño de fuente relativo */
+    font-size: 1.5vw;
     color: #333; 
     z-index: 3;
 }
 
 /* ========================================================== */
-/* MEDIA QUERIES PARA RESPONSIVIDAD (Ajustar en móvil) */
+/* MEDIA QUERIES (Asegúrate de reemplazar el bloque antiguo) */
 /* ========================================================== */
 
 @media (max-width: 768px) {
     /* Ajustes para la portada en dispositivos móviles */
-    .portfolio-text-image {
-        width: 100%;
+    .main-title-img {
+        width: 90%;
         top: 40%;
     }
     .character-img {
-        width: 50%;
-        top: 40%;
+        width: 45%;
+        top: 45%;
     }
-    .year-text {
-        font-size: 4vw;
-        top: 50%;
-        left: 70%;
+    
+    /* Reposicionamiento de los textos cursivos en móvil */
+    .text-edicion, .text-diseno, .text-ilustracion, .text-branding {
+        width: 25%; 
     }
+    
+    .text-edicion { top: 20%; left: 25%; }
+    .text-diseno { top: 20%; left: 75%; }
+    .text-ilustracion { top: 75%; left: 30%; }
+    .text-branding { top: 75%; left: 70%; }
+    
     .author-name {
-        font-size: 3vw;
+        font-size: 4vw;
         bottom: 5%;
     }
     
