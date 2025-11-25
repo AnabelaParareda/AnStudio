@@ -1,541 +1,564 @@
+/* ========================================================== */
+/* 0. ESTILOS BASE Y GENERALES */
+/* ========================================================== */
+
 body, html {
- margin: 0;
- padding: 0;
- font-family: Arial, sans-serif;
- scroll-behavior: smooth;
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+scroll-behavior: smooth;
 }
 
-nav {
- position: fixed;
- top: 0;
- width: 100%;
- background: rgba(0, 0, 0, 0.85);
- padding: 18px;
- text-align: center;
- z-index: 1000;
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
-nav ul {
- list-style: none;
- margin: 0;
- padding: 0;
- display: flex;
- justify-content: center;
- gap: 18px;
-}
-
-nav ul li a {
- color: white;
- text-decoration: none;
- font-weight: bold;
- text-transform: uppercase;
-}
-
-nav ul li a:hover {
- color: #ebac00;
-}
-
-/* MENU */
-
-.menu-icon {
- display: none; 
- width: 25px;
- height: 25px;
- cursor: pointer;
- object-fit: contain;
-}
-
-/* INICIO-SOBRE MI */
+/* Propiedades generales de las secciones */
 .section {
- height: 100vh;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- text-align: center;
- padding: 18px; 
- box-sizing: border-box;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 18px; 
+box-sizing: border-box;
 }
 
+/* Estilos de fondo de las secciones */
 .yellow {
- background: #ebac00;
- color: black;
- font-size: 15px;
-}
-
-.an-art {
- margin-bottom: 0px; 
- font-size: 30px;
-}
-
-.primera-presentacion {
- font-size: 22px;
- font-weight: normal;
+background: #ebac00;
+color: black;
+font-size: 15px;
 }
 
 .dark {
- background: #000000;
- color: #ffffff;
- padding-left: 300px;
- padding-right: 300px;
+background: #000000;
+color: #ffffff;
+padding-left: 300px;
+padding-right: 300px;
 }
+
+/* Aseguramos el centrado del texto dentro de todos los títulos de sección */
+.section h2 {
+    text-align: center;
+}
+
+/* ========================================================== */
+/* 1. NAVEGACIÓN (NAV) */
+/* ========================================================== */
+
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.85);
+padding: 18px;
+text-align: center;
+z-index: 1000;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+gap: 18px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+nav ul li a:hover {
+color: #ebac00;
+}
+
+/* Icono de menú para móvil */
+.menu-icon {
+display: none; 
+width: 25px;
+height: 25px;
+cursor: pointer;
+object-fit: contain;
+}
+
+/* ========================================================== */
+/* 2. SECCIÓN INICIO (#inicio) - PORTADA */
+/* ========================================================== */
+
+.hero-section {
+  background-color: #f5ecd5; /* Color crema de tu diseño */
+  height: 100vh;
+  padding: 0; 
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Área de trabajo central */
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Título principal (portafolio_main.png) */
+.main-title-img {
+  position: absolute;
+  width: 70%; 
+  max-width: 850px; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+/* Ilustración (yop.png) */
+.character-img {
+  position: absolute;
+  width: 11%; 
+  max-width: 1000px; 
+  top: 48%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+}
+
+/* Palabras en cursiva (Posicionamiento preciso) */
+
+.text-edicion {
+  position: absolute;
+  width: 22%; 
+  max-width: 1000px;
+  top: 38%; 
+  left: 26%; 
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+
+.text-diseno {
+  position: absolute;
+  width: 22%; 
+  max-width: 100%;
+  top: 36%; 
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.text-ilustracion {
+  position: absolute;
+  width: 22%; 
+  max-width: 100%;
+  top: 63%; 
+  left: 35%; 
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.text-branding {
+  position: absolute;
+  width: 22%; 
+  max-width: 100%;
+  top: 63%; 
+  left: 64%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.text-anstudio {
+  position: absolute;
+  width: 15%; 
+  max-width: 100%; 
+  top: 90%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+/* Títulos y textos (no usados en la portada, pero mantenidos por si acaso) */
+.an-art {
+margin-bottom: 0px; 
+font-size: 30px;
+}
+
+.primera-presentacion {
+font-size: 22px;
+font-weight: normal;
+}
+
+/* ========================================================== */
+/* 3. SECCIÓN SOBRE MÍ (#sobre-mi) */
+/* ========================================================== */
 
 .presentacion {
- font-size: 24px;
+font-size: 24px;
+    text-align: center;
 }
 
 .dialogo {
- font-size: 20px;
-}
-
-.corazon {
- font-size: 25px;
-}
-
-.proyecto {
- font-size: 20px;
- margin-bottom: 25px; 
-}
-
-.avatar {
- width: 140px;
- padding-top: 20px;
-}
-
-.dialogo {
- font-size: 20px;
- text-align: center; 
+font-size: 20px;
+text-align: center; 
 }
 
 .typing-effect {
- display: inline-block; 
- white-space: normal; 
- overflow: hidden; 
- border-right: .05em solid transparent; 
- padding-right: 2px;
- max-width: 800px; 
- margin: 0 auto; 
- animation: none; 
+display: inline-block; 
+white-space: normal; 
+overflow: hidden; 
+border-right: .05em solid transparent; 
+padding-right: 2px;
+max-width: 800px; 
+margin: 0 auto; 
+animation: none; 
 }
 
 .typing-effect.completed {
-  border-right: none !important; 
-  animation: none !important; 
+ border-right: none !important; 
+ animation: none !important; 
 }
 
+.avatar {
+width: 140px;
+padding-top: 20px;
+}
+
+.corazon {
+font-size: 25px;
+}
+
+/* ========================================================== */
+/* 4. SECCIÓN HABILIDADES (#habilidades) */
+/* ========================================================== */
+
 .skills {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
- gap: 20px; 
- list-style: none;
- padding: 0;
- max-width: 900px; 
- margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+gap: 20px; 
+list-style: none;
+padding: 0;
+max-width: 900px; 
+margin: 0 auto;
 }
 
 .skills li {
- background-color: #ffffff;
- color: #111;
- border-radius: 10px;
- box-shadow: 
-  0 8px 15px rgba(0, 0, 0, 0.2), 
-  0 3px 5px rgba(0, 0, 0, 0.1); 
- border-bottom: 3px solid rgba(0, 0, 0, 0.1); 
- transition: 
-  transform 0.2s ease-out, 
-  box-shadow 0.2s ease-out,
-  border-bottom 0.2s ease-out;
- text-align: center;
- font-weight: bold;
- position: relative; 
+background-color: #ffffff;
+color: #111;
+border-radius: 10px;
+box-shadow: 
+ 0 8px 15px rgba(0, 0, 0, 0.2), 
+ 0 3px 5px rgba(0, 0, 0, 0.1); 
+border-bottom: 3px solid rgba(0, 0, 0, 0.1); 
+transition: 
+ transform 0.2s ease-out, 
+ box-shadow 0.2s ease-out,
+ border-bottom 0.2s ease-out;
+text-align: center;
+font-weight: bold;
+position: relative; 
 }
 
 .skills li a {
- display: block; 
- padding: 20px; 
- color: inherit; 
- text-decoration: none; 
- cursor: pointer;
+display: block; 
+padding: 20px; 
+color: inherit; 
+text-decoration: none; 
+cursor: pointer;
 }
 
 .skills li:hover {
- transform: translateY(-7px) scale(1.02);
- box-shadow: 
-  0 12px 20px rgba(0, 0, 0, 0.3), 
-  0 5px 8px rgba(0, 0, 0, 0.2); 
- border-bottom: 3px solid rgba(0, 0, 0, 0.2); 
+transform: translateY(-7px) scale(1.02);
+box-shadow: 
+ 0 12px 20px rgba(0, 0, 0, 0.3), 
+ 0 5px 8px rgba(0, 0, 0, 0.2); 
+border-bottom: 3px solid rgba(0, 0, 0, 0.2); 
 }
 
 .skills li:active {
- transform: translateY(-2px); 
- box-shadow: 
-  0 4px 8px rgba(0, 0, 0, 0.2), 
-  0 2px 3px rgba(0, 0, 0, 0.1);
- border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+transform: translateY(-2px); 
+box-shadow: 
+ 0 4px 8px rgba(0, 0, 0, 0.2), 
+ 0 2px 3px rgba(0, 0, 0, 0.1);
+border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
-/* CARRUSEL */
+/* ========================================================== */
+/* 5. SECCIÓN PROYECTOS (#proyectos) - CARRUSEL */
+/* ========================================================== */
+
+.proyecto {
+font-size: 20px;
+margin-bottom: 25px; 
+    text-align: center;
+}
 
 .owl-carousel {
- width: 90%;
- max-width: 1000px;
- margin: 0 auto; /* Esto centra el carrusel en la página */
+width: 90%;
+max-width: 1000px;
+margin: 0 auto; /* Centra el carrusel en la página */
 }
 
 .owl-carousel .item {
- text-align: center;
+text-align: center;
 }
 
 /* Hacemos las imágenes cliqueables */
 .owl-carousel .item img {
- width: 100%;
- height: 300px; 
- object-fit: contain; 
- border-radius: 10px;
-  cursor: pointer; /* Añadido para indicar que es cliqueable */
+width: 100%;
+height: 300px; 
+object-fit: contain; 
+border-radius: 10px;
+ cursor: pointer; 
 }
 
 .owl-carousel .item p {
- color: #ffffff;
- margin-top: 15px;
- font-size: 16px;
+color: #ffffff;
+margin-top: 15px;
+font-size: 16px;
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
- background: #ebac00;
+background: #ebac00;
 }
 
 .owl-theme .owl-nav [class*='owl-'] {
- background: #ebac00; 
- color: rgb(0, 0, 0);
- font-size: 20px;
- margin: 0 10px;
- border-radius: 50%;
- width: 40px;
- height: 40px;
- line-height: 1.8; 
- transition: background 0.3s ease;
+background: #ebac00; 
+color: rgb(0, 0, 0);
+font-size: 20px;
+margin: 0 10px;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+line-height: 1.8; 
+transition: background 0.3s ease;
 }
 
 .owl-theme .owl-nav [class*='owl-']:hover {
- background: #ffc107; 
+background: #ffc107; 
 }
 
-/* CONTACTO */
+/* ========================================================== */
+/* 6. SECCIÓN CONTACTO (#contacto) */
+/* ========================================================== */
+
 .socials {
- display: flex;
- gap: 30px;
- font-size: 40px;
+display: flex;
+gap: 30px;
+font-size: 40px;
+/* MODIFICACIÓN: Centra los iconos horizontalmente */
+justify-content: center;
 }
 
 .socials a {
- color: black;
- transition: color 0.3s;
+color: black;
+transition: color 0.3s;
 }
 
 .socials a:hover {
- color: #795900;
+color: #795900;
 }
 
-/* FOOTER */
+/* ========================================================== */
+/* 7. PIE DE PÁGINA (FOOTER) */
+/* ========================================================== */
+
 #footer {
- height: auto; 
- background: #000000; 
- color: #ffffff;
- padding: 30px 18px; 
- text-align: center;
+height: auto; 
+background: #000000; 
+color: #ffffff;
+padding: 30px 18px; 
+text-align: center;
 }
 
 #footer p {
- margin: 0;
- font-size: 14px; 
+margin: 0;
+font-size: 14px; 
 }
 
-/* RESPONSIVE */
+/* ========================================================== */
+/* 8. LIGHTBOX/MODAL STYLES */
+/* ========================================================== */
+
+.modal {
+ display: none; /* Oculto por defecto */
+ position: fixed; 
+ z-index: 9999; 
+ left: 0;
+ top: 0;
+ width: 100%; 
+ height: 100%; 
+ overflow: auto; 
+ background-color: rgba(0, 0, 0, 0.599); 
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 20px;
+}
+
+/* Contenido del Modal (La Imagen) */
+.modal-content {
+ width: auto; 
+ max-width: 90vw; 
+ max-height: 80vh; 
+ object-fit: contain; 
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+ border-radius: 8px;
+ /* Animación de entrada */
+ -webkit-animation-name: zoom;
+ -webkit-animation-duration: 0.6s;
+ animation-name: zoom;
+ animation-duration: 0.6s;
+}
+
+/* Animación de entrada */
+@-webkit-keyframes zoom {
+ from {-webkit-transform:scale(0)} 
+ to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+ from {transform:scale(0)} 
+ to {transform:scale(1)}
+}
+
+/* Texto de la descripción (Caption) */
+#caption {
+ display: block;
+ max-width: 90vw;
+ text-align: center;
+ color: #ffffff; 
+ padding: 10px 0;
+ font-size: 1.1em;
+ font-weight: bold;
+}
+
+/* Botón de Cerrar (la X) */
+.close-btn {
+ position: absolute;
+ top: 15px;
+ right: 35px;
+ color: #111; 
+ font-size: 40px;
+ font-weight: bold;
+ transition: 0.3s;
+ cursor: pointer;
+}
+
+.close-btn:hover {
+ color: #ebac00; 
+}
+
+
+/* ========================================================== */
+/* 9. MEDIA QUERIES (RESPONSIVE) */
+/* ========================================================== */
 
 /* Tablets */
 @media (max-width: 1024px) {
- .dark {
-  padding-left: 100px;
-  padding-right: 100px;
- }
+.dark {
+ padding-left: 100px;
+ padding-right: 100px;
+}
 }
 
 /* Para celulares */
 @media (max-width: 768px) {
 
 
- nav {
-  justify-content: center; 
- }
-
- nav .lista {
-  position: absolute;
-  top: 55px; 
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  flex-direction: column;
-  padding: 10px 0;
-  display: none; 
- }
-
- nav .lista li {
-  padding: 10px 0; 
- }
-
- /* Mostrar el ícono en móvil */
- .menu-icon {
-  display: block;
-  position: absolute; 
-  right: 20px;
-  top: 15px; 
- }
-
- .dark {
-  padding-left: 20px;
-  padding-right: 20px;
- }
-
- .skills {
-  grid-template-columns: 1fr; 
- }
-
- .avatar {
-  width: 150px;
- }
-
- .primera-presentacion {
-  font-size: 16px;
- }
-
- .presentacion {
-  font-size: 20px;
- }
-
- .dialogo {
-  font-size: 16px;
- }
-
+nav {
+ justify-content: center; 
 }
 
-/* ========================================================== */
-/* LIGHTBOX/MODAL STYLES (CORREGIDO - Solo un display: none al inicio) */
-/* ========================================================== */
-
-.modal {
-  display: none; /* Oculto por defecto */
-  position: fixed; 
-  z-index: 9999; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  /* CLAVE: Fondo blanco semi-transparente */
-  background-color: rgba(0, 0, 0, 0.599); 
-  /* Usamos las propiedades de Flexbox para el centrado, pero sin el 'display: flex'*/
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+nav .lista {
+ position: absolute;
+ top: 55px; 
+ left: 0;
+ width: 100%;
+ background: rgba(0, 0, 0, 0.95);
+ flex-direction: column;
+ padding: 10px 0;
+ display: none; 
 }
 
-/* Contenido del Modal (La Imagen) */
-.modal-content {
-  width: auto; 
-  max-width: 90vw; /* 90% del ancho visible */
-  max-height: 80vh; /* 80% de la altura visible */
-  object-fit: contain; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
-  border-radius: 8px;
-  /* Animación de entrada */
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+nav .lista li {
+ padding: 10px 0; 
 }
 
-/* Animación de entrada */
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+/* Mostrar el ícono en móvil */
+.menu-icon {
+ display: block;
+ position: absolute; 
+ right: 20px;
+ top: 15px; 
 }
 
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+.dark {
+ padding-left: 20px;
+ padding-right: 20px;
 }
 
-/* Texto de la descripción (Caption) */
-#caption {
-  display: block;
-  max-width: 90vw;
-  text-align: center;
-  color: #ffffff; /* Color de texto oscuro */
-  padding: 10px 0;
-  font-size: 1.1em;
-  font-weight: bold;
+.skills {
+ grid-template-columns: 1fr; 
 }
 
-/* Botón de Cerrar (la X) */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #111; /* Color oscuro para el fondo claro */
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
+.avatar {
+ width: 150px;
 }
 
-.close-btn:hover {
-  color: #ebac00; /* Color de tu tema al pasar el mouse */
+.primera-presentacion {
+ font-size: 16px;
 }
 
-/* ========================================================== */
-/* ESTILOS DE LA PORTADA (Sección #inicio) */
-/* ========================================================== */
-
-.hero-section {
-    /* Fondo color crema de tu diseño (quitamos el amarillo #ebac00) */
-    background-color: #f5ecd5; 
-    height: 100vh;
-    padding: 0; 
-    position: relative; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.presentacion {
+ font-size: 20px;
 }
 
-.hero-content {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* Área de trabajo central */
-    height: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dialogo {
+ font-size: 16px;
 }
-
-/* 1. Título principal "PORTAFOLIO" (portafolio_main.png) */
-.main-title-img {
-    position: absolute;
-    width: 70%; 
-    max-width: 850px; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1; 
-}
-
-/* 2. Ilustración inicio */
-.character-img {
-    position: absolute;
-    width: 11%; 
-    max-width: 1000px; 
-    top: 48%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; 
-}
-
-/* 3. Palabras en cursiva (Posicionamiento preciso) */
-
-.text-edicion {
-    position: absolute;
-    width: 22%; 
-    max-width: 1000px;
-    top: 38%; 
-    left: 26%; 
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-
-.text-diseno {
-    position: absolute;
-    width: 22%; 
-    max-width: 100%;
-    top: 36%; /* Arriba a la derecha */
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-.text-ilustracion {
-    position: absolute;
-    width: 22%; 
-    max-width: 100%;
-    top: 63%; /* Abajo a la izquierda */
-    left: 35%; 
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-.text-branding {
-    position: absolute;
-    width: 22%; 
-    max-width: 100%;
-    top: 63%; /* Abajo a la derecha */
-    left: 64%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-.text-anstudio {
-    position: absolute;
-    width: 15%; 
-    max-width: 100%; 
-    top: 90%; /* Abajo de todo */
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1; 
-}
-
-/* ========================================================== */
-/* MEDIA QUERIES (Asegúrate de reemplazar el bloque antiguo) */
-/* ========================================================== */
-
-@media (max-width: 768px) {
+    
     /* Ajustes para la portada en dispositivos móviles */
-    .main-title-img {
-        width: 90%;
-        top: 40%;
-    }
-    .character-img {
-        width: 45%;
-        top: 45%;
-    }
-    
-    /* Reposicionamiento de los textos cursivos en móvil */
-    .text-edicion, .text-diseno, .text-ilustracion, .text-branding {
-        width: 25%; 
-    }
-    
-    .text-edicion { top: 20%; left: 25%; }
-    .text-diseno { top: 20%; left: 75%; }
-    .text-ilustracion { top: 75%; left: 30%; }
-    .text-branding { top: 75%; left: 70%; }
-    
-    .author-name {
-        font-size: 4vw;
-        bottom: 5%;
-    }
-    
-    /* Asegurar que las otras secciones mantengan su padding en amarillo */
-    .yellow {
-        background: #ebac00;
-        color: black;
-    }
-    .hero-section {
-        background-color: #f7f3e9; 
-    }
+ .main-title-img {
+    width: 90%;
+  top: 40%;
+  }
+  .character-img {
+    width: 45%;
+    top: 45%;
+  }
+  
+  /* Reposicionamiento de los textos cursivos en móvil */
+  .text-edicion, .text-diseno, .text-ilustracion, .text-branding {
+    width: 25%; 
+  }
+  
+  .text-edicion { top: 20%; left: 25%; }
+  .text-diseno { top: 20%; left: 75%; }
+  .text-ilustracion { top: 75%; left: 30%; }
+  .text-branding { top: 75%; left: 70%; }
+  
+  .author-name {
+    font-size: 4vw;
+    bottom: 5%;
+  }
+  
+  /* Asegurar que las otras secciones mantengan su fondo */
+  .yellow {
+    background: #ebac00;
+    color: black;
+  }
+  .hero-section {
+    background-color: #f7f3e9; 
+  }
 }
