@@ -48,7 +48,6 @@ nav ul li a:hover {
  object-fit: contain;
 }
 
-
 /* INICIO-SOBRE MI */
 .section {
  height: 100vh;
@@ -79,7 +78,7 @@ nav ul li a:hover {
 
 .dark {
  background: #000000;
- color: white;
+ color: #ffffff;
  padding-left: 300px;
  padding-right: 300px;
 }
@@ -246,7 +245,7 @@ nav ul li a:hover {
 #footer {
  height: auto; 
  background: #000000; 
- color: white;
+ color: #ffffff;
  padding: 30px 18px; 
  text-align: center;
 }
@@ -400,12 +399,12 @@ nav ul li a:hover {
 }
 
 /* ========================================================== */
-/* ESTILOS DE LA PORTADA (Sección #inicio) - DISEÑO GRÁFICO (NUEVO) */
+/* ESTILOS DE LA PORTADA (Sección #inicio) */
 /* ========================================================== */
 
 .hero-section {
     /* Fondo color crema de tu diseño (quitamos el amarillo #ebac00) */
-    background-color: #f7f3e9; 
+    background-color: #f5ecd5; 
     height: 100vh;
     padding: 0; 
     position: relative; 
@@ -437,44 +436,45 @@ nav ul li a:hover {
     z-index: 1; 
 }
 
-/* 2. Ilustración de la Chica (yop.png) */
+/* 2. Ilustración inicio */
 .character-img {
     position: absolute;
-    width: 25%; /* Aumentamos el tamaño para que cubra PORTAFOLIO */
-    max-width: 320px; 
-    top: 50%; 
+    width: 11%; 
+    max-width: 1000px; 
+    top: 48%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2; /* Por encima del texto principal */
+    z-index: 2; 
 }
 
 /* 3. Palabras en cursiva (Posicionamiento preciso) */
 
 .text-edicion {
     position: absolute;
-    width: 10%; /* Tamaño relativo */
-    max-width: 150px;
-    top: 35%; /* Arriba a la izquierda */
-    left: 30%; 
+    width: 22%; 
+    max-width: 1000px;
+    top: 38%; 
+    left: 26%; 
     transform: translate(-50%, -50%);
     z-index: 3;
 }
 
+
 .text-diseno {
     position: absolute;
-    width: 15%; 
-    max-width: 150px;
-    top: 35%; /* Arriba a la derecha */
-    left: 70%;
+    width: 22%; 
+    max-width: 100%;
+    top: 36%; /* Arriba a la derecha */
+    left: 75%;
     transform: translate(-50%, -50%);
     z-index: 3;
 }
 
 .text-ilustracion {
     position: absolute;
-    width: 20%; 
-    max-width: 200px;
-    top: 65%; /* Abajo a la izquierda */
+    width: 22%; 
+    max-width: 100%;
+    top: 63%; /* Abajo a la izquierda */
     left: 35%; 
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -482,23 +482,22 @@ nav ul li a:hover {
 
 .text-branding {
     position: absolute;
-    width: 20%; 
-    max-width: 200px;
-    top: 65%; /* Abajo a la derecha */
-    left: 70%;
+    width: 22%; 
+    max-width: 100%;
+    top: 63%; /* Abajo a la derecha */
+    left: 64%;
     transform: translate(-50%, -50%);
     z-index: 3;
 }
 
-/* 4. Nombre de la Autora (Mantenemos el texto centrado debajo) */
-.author-name {
+.text-anstudio {
     position: absolute;
-    bottom: 5%; 
+    width: 15%; 
+    max-width: 100%; 
+    top: 90%; /* Abajo de todo */
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5vw;
-    color: #333; 
-    z-index: 3;
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
 }
 
 /* ========================================================== */
