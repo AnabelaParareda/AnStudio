@@ -149,7 +149,7 @@ object-fit: contain;
 }
 /* MODIFICACIÓN: Efecto zoom al pasar el mouse */
 .text-edicion:hover {
-    transform: translate(-50%, -50%) scale(1.1); /* Escala al 110% */
+    transform: translate(-50%, -50%) scale(1.2); /* Escala al 110% */
 }
 
 
@@ -166,7 +166,7 @@ object-fit: contain;
 }
 /* MODIFICACIÓN: Efecto zoom al pasar el mouse */
 .text-diseno:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .text-ilustracion {
@@ -182,7 +182,7 @@ object-fit: contain;
 }
 /* MODIFICACIÓN: Efecto zoom al pasar el mouse */
 .text-ilustracion:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .text-branding {
@@ -198,7 +198,7 @@ object-fit: contain;
 }
 /* MODIFICACIÓN: Efecto zoom al pasar el mouse */
 .text-branding:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .text-anstudio {
