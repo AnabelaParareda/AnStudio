@@ -73,7 +73,7 @@ if (typingElement && sobreMiNavBtn) {
     
     let charIndex = 0; 
     const characters = originalText.split(''); 
-    const baseSpeed = 40; 
+    const baseSpeed = 25; 
     
     let typingTimeout; 
 
