@@ -1,12 +1,35 @@
 // ==========================================================
 // 1. CÓDIGO EJECUTADO AL CARGAR EL DOCUMENTO (JQUERY READY)
 // ==========================================================
+
 $(document).ready(function(){
     
-    // --- MENÚ HAMBURGUESA ---
-    $('.menu-icon').click(function(){
-        $('nav .lista').slideToggle();
-    });
+// ------------------------------------
+// --- RESPONSIVE: MENÚ HAMBURGUESA ---
+// ------------------------------------
+
+// 1. Al hacer clic en el botón/toggle
+$('.menu-toggle').click(function(){
+    // Togglea (añade/quita) la clase 'active' al contenedor de enlaces
+    $('.nav-links-container').toggleClass('active');
+});
+
+// 2. Cerrar el menú después de hacer clic en un enlace (Mejora de UX móvil)
+$('.nav-links-container a').click(function() {
+    // Si la ventana es pequeña (asumimos menos de 769px), quita la clase 'active'
+    if ($(window).width() < 769) {
+        $('.nav-links-container').removeClass('active');
+    }
+
+// 3. Manejo del Menú al Redimensionar ---
+// Si el usuario agranda la ventana a desktop, nos aseguramos de que el menú esté cerrado.
+$(window).resize(function() {
+    if ($(window).width() > 768) {
+        $('.nav-links-container').removeClass('active');
+    }
+});    
+
+});
 
     // --- INICIALIZACIÓN DE OWL CAROUSEL ---
     $('.owl-carousel').owlCarousel({
