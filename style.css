@@ -50,11 +50,11 @@ nav {
   top: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.85);
-  padding: 18px;
+  padding: 18px 0px; 
   text-align: center;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centra todo el contenido del nav */
   align-items: center;
 }
 
@@ -78,12 +78,26 @@ nav ul li a:hover {
   color: #ebac00;
 }
 
+/* Oculta el botón de hamburguesa en desktop */
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para el contenedor de la lista de enlaces (necesario por el cambio de HTML) */
+.nav-links-container {
+  width: auto;
+}
+
 /* Icono de menú para móvil */
 .menu-icon {
-  display: none;
+  display: none; /* Asegura que esté oculto en desktop */
   width: 25px;
   height: 25px;
-  cursor: pointer;
   object-fit: contain;
 }
 
@@ -92,7 +106,7 @@ nav ul li a:hover {
 /* ========================================================== */
 
 .hero-section {
-  background-color: #f5ecd5;
+  background-color: #ede6d5;
   /* Color crema de tu diseño */
   height: 100vh;
   padding: 0;
@@ -129,9 +143,9 @@ nav ul li a:hover {
 /* Año debajo de Portafolio */
 .text-año {
   position: absolute;
-  width: 18%;
+  width: 15%;
   max-width: 1200px;
-  top: 63%;
+  top: 64%;
   left: 74%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -154,7 +168,7 @@ nav ul li a:hover {
   align-items: center;
   width: 15%;
   max-width: 1200px;
-  top: 90%;
+  top: 85%;
   left: 49.5%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -166,7 +180,7 @@ nav ul li a:hover {
   position: absolute;
   width: 24%;
   max-width: 1200px;
-  top: 42%;
+  top: 41%;
   left: 26%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -183,7 +197,7 @@ nav ul li a:hover {
   position: absolute;
   width: 24%;
   max-width: 1200px;
-  top: 40%;
+  top: 39%;
   left: 75%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -200,7 +214,7 @@ nav ul li a:hover {
   position: absolute;
   width: 24%;
   max-width: 1200px;
-  top: 65%;
+  top: 66%;
   left: 35%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -217,7 +231,7 @@ nav ul li a:hover {
   position: absolute;
   width: 24%;
   max-width: 1200px;
-  top: 65%;
+  top: 66%;
   left: 64%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -234,35 +248,85 @@ nav ul li a:hover {
 /* 3. SECCIÓN SOBRE MÍ (#sobre-mi) */
 /* ========================================================== */
 
-.presentacion {
-  font-size: 24px;
+.sobre-mi-rediseño {
+    background: #ede6d5; /* Color crema */
+    color: #333; /* Texto oscuro */
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor principal para los elementos rediseñados */
+.sobre-mi-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 1. Ilustración (quiensoy.png) */
+.an-pensativa-img {
+    position: absolute;
+    width: 12%; 
+    max-width: 200px;
+    top: 17%;
+    left: 20%;
+    z-index: 2;
+}
+
+/* 2. Contenedor amarillo (contenedorpresentacion.png) */
+.dialogo-container {
+    position: relative;
+    width: 55%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%; /* Mueve el diálogo a la derecha */
+    margin-top: 5%;
+}
+
+/* La imagen de la forma amarilla (fondo) */
+.dialogo-shape-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* 3. Wrapper del texto sobre la forma */
+.dialogo-text-wrapper {
+  position: relative;
+  z-index: 3;
   text-align: center;
+  color: #000000;
+  width: 70%;
+  height: 82%;
+  display: flex;
+  flex-direction: column;
+  /* MODIFICACIÓN: Cambiar el centrado por alineación al inicio */
+  justify-content: flex-start; 
+  /* MODIFICACIÓN: Alineación horizontal al centro */
+  align-items: center;
+  top: 5px;
 }
 
-.dialogo {
-  font-size: 20px;
-  text-align: center;
+/* Ajustes de tipografía */
+.sobre-mi-rediseño .presentacion {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  color: #000000;
 }
 
-.typing-effect {
-  display: inline-block;
-  white-space: normal;
-  overflow: hidden;
-  border-right: .05em solid transparent;
-  padding-right: 2px;
-  max-width: 800px;
-  margin: 0 auto;
-  animation: none;
-}
-
-.typing-effect.completed {
-  border-right: none !important;
-  animation: none !important;
-}
-
-.avatar {
-  width: 140px;
-  padding-top: 20px;
+.sobre-mi-rediseño .dialogo {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #000000;
 }
 
 /* ========================================================== */
@@ -514,34 +578,63 @@ nav ul li a:hover {
 /* Para celulares */
 @media (max-width: 768px) {
 
-
-  nav {
-    justify-content: center;
+  /* Ajuste de Secciones Generales */
+  .section {
+    min-height: 100vh; /* Se asegura de ocupar al menos la altura de la vista */
+    height: auto; /* Permite que la altura crezca según el contenido */
+    padding: 80px 18px; /* Añade más padding vertical para respirar */
   }
 
-  nav .lista {
+  .hero-section {
+    min-height: 100vh;
+    height: 100vh; /* Mantenemos 100vh para la portada */
+    padding: 0;
+  }
+
+  /* 1. Navegación Móvil (Menú Hamburguesa) */
+  nav {
+    justify-content: space-between; /* MODIFICADO: Para que el icono esté a la derecha */
+    padding: 10px 20px;
+  }
+
+  /* Mostrar y posicionar el botón de hamburguesa */
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .menu-icon {
+    display: block; /* Muestra el icono dentro del botón */
+  }
+
+  /* Contenedor de enlaces (Oculto por defecto, se activa con JS) */
+  .nav-links-container {
+    display: none; /* Oculto por defecto */
     position: absolute;
     top: 55px;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
+    z-index: 999;
+  }
+  
+  /* Mostrar lista vertical */
+  nav ul.lista {
     flex-direction: column;
     padding: 10px 0;
-    display: none;
   }
 
-  nav .lista li {
+  nav ul.lista li {
     padding: 10px 0;
+    text-align: center;
   }
 
-  /* Mostrar el ícono en móvil */
-  .menu-icon {
+  /* Clase que se activa con JavaScript para mostrar el menú */
+  .nav-links-container.active {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 15px;
   }
-
+  
+  /* 2. Ajustes de la sección SOBRE MÍ y HABILIDADES */
   .dark {
     padding-left: 20px;
     padding-right: 20px;
@@ -549,14 +642,7 @@ nav ul li a:hover {
 
   .skills {
     grid-template-columns: 1fr;
-  }
-
-  .avatar {
-    width: 150px;
-  }
-
-  .primera-presentacion {
-    font-size: 16px;
+    gap: 15px;
   }
 
   .presentacion {
@@ -567,21 +653,27 @@ nav ul li a:hover {
     font-size: 16px;
   }
 
-  /* Ajustes para la portada en dispositivos móviles */
+  /* 3. Ajustes para la portada en dispositivos móviles */
+  
+  .hero-content {
+      height: 100%;
+  }
+
   .main-title-img {
-    width: 100%;
-    top: 40%;
+    width: 90%;
+    max-width: none;
+    top: 50%;
   }
 
   .character-img {
-    width: 18%;
-    top: 38%;
+    width: 25%;
+    top: 50%;
   }
 
   .text-año {
-    width: 28%;
-    top: 44%;
-    left: 83%;
+    width: 30%;
+    top: 58%;
+    left: 80%;
   }
 
   /* Reposicionamiento de los textos cursivos en móvil */
@@ -589,32 +681,42 @@ nav ul li a:hover {
   .text-diseno,
   .text-ilustracion,
   .text-branding {
-    width: 40%;
+    width: 35%;
+    /* Desactivar el hover en móviles para evitar bugs con el toque */
+    transition: none;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .text-edicion:hover,
+  .text-diseno:hover,
+  .text-ilustracion:hover,
+  .text-branding:hover {
+      transform: translate(-50%, -50%) scale(1); /* Desactiva el zoom en hover */
   }
 
   .text-edicion {
-    top: 35%;
-    left: 16%;
+    top: 38%;
+    left: 20%;
   }
 
   .text-diseno {
-    top: 34%;
-    left: 85%;
+    top: 40%;
+    left: 80%;
   }
 
   .text-ilustracion {
-    top: 45%;
-    left: 28%;
+    top: 60%;
+    left: 25%;
   }
 
   .text-branding {
-    top: 45%;
-    left: 70%;
+    top: 62%;
+    left: 75%;
   }
 
   .text-anstudio {
-    width: 30%;
-    top: 55%;
+    width: 40%;
+    top: 85%;
   }
 
   /* Asegurar que las otras secciones mantengan su fondo */
